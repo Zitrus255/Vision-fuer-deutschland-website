@@ -31,3 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// Impressum Modal öffnen/schließen
+const impressumBtn = document.getElementById('impressumBtn');
+const impressumModal = document.getElementById('impressumModal');
+const closeImpressum = document.getElementById('closeImpressum');
+
+impressumBtn.addEventListener('click', () => {
+  impressumModal.style.display = 'block';
+});
+
+closeImpressum.addEventListener('click', () => {
+  impressumModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === impressumModal) {
+    impressumModal.style.display = 'none';
+  }
+});

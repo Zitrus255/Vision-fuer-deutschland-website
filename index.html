@@ -88,39 +88,82 @@
  
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll("nav button.tab-button");
-      const sections = document.querySelectorAll("main section.tab-content");
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("nav button.tab-button");
+  const sections = document.querySelectorAll("main section.tab-content");
 
-      buttons.forEach(button => {
-        button.addEventListener("click", () => {
-          const target = button.getAttribute("data-tab");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-tab");
 
-          // Alle Tabs verstecken & Buttons deaktivieren
-          sections.forEach(section => {
-            section.hidden = true;
-            section.classList.remove("active");
-          });
-          buttons.forEach(btn => btn.classList.remove("active"));
-
-          // Gewählten Tab zeigen & Button aktivieren
-          document.getElementById(target).hidden = false;
-          document.getElementById(target).classList.add("active");
-          button.classList.add("active");
-        });
+      // Alle Tabs verstecken & Buttons deaktivieren
+      sections.forEach(section => {
+        section.hidden = true;
+        section.classList.remove("active");
       });
+      buttons.forEach(btn => btn.classList.remove("active"));
 
-      // Dark Mode Switch
-      const darkModeSwitch = document.getElementById('darkModeSwitch');
-      darkModeSwitch.addEventListener('change', () => {
-        if (darkModeSwitch.checked) {
-          document.body.classList.add('dark-mode');
-        } else {
-          document.body.classList.remove('dark-mode');
-        }
-      });
+      // Gewählten Tab zeigen & Button aktivieren
+      document.getElementById(target).hidden = false;
+      document.getElementById(target).classList.add("active");
+      button.classList.add("active");
     });
-  </script>
+  });
+
+  // Dark Mode Switch
+  const darkModeSwitch = document.getElementById('darkModeSwitch');
+  darkModeSwitch.addEventListener('change', () => {
+    if (darkModeSwitch.checked) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  });
+
+  // Impressum Modal
+  const impressumBtn = document.getElementById('impressumBtn');
+  const impressumModal = document.getElementById('impressumModal');
+  const closeImpressum = document.getElementById('closeImpressum');
+
+  impressumBtn.addEventListener('click', () => {
+    impressumModal.style.display = 'block';
+  });
+
+  closeImpressum.addEventListener('click', () => {
+    impressumModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === impressumModal) {
+      impressumModal.style.display = 'none';
+    }
+  });
+});
+</script>
+
+<footer>
+  <p>© 2025 Vision für Deutschland (VFD)</p>
+  <button id="impressumBtn" class="footer-link">Impressum</button>
+</footer>
+
+<!-- Impressum Modal -->
+<div id="impressumModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeImpressum">&times;</span>
+    <h2>Impressum</h2>
+    <p><strong>Verantwortlich für den Inhalt:</strong><br>
+    Paul Schulz<br>
+    Honigacker 23<br>
+    91583 Diebach<br>
+    <a href="mailto:visionfuerdeutschland.an@gmail.com">visionfuerdeutschland.an@gmail.com</a><br>
+    0171 179 6643</p>
+    <p><strong>Partei:</strong> Vision für Deutschland (VFD)<br>
+    <strong>Website:</strong> <a href="https://zitrus255.github.io/ision-fuer-deutschland-website/" target="_blank" rel="noopener">https://zitrus255.github.io/ision-fuer-deutschland-website/</a></p>
+    <p><strong>Haftungsausschluss:</strong><br>
+    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+  </div>
+</div>
+
 </body>
 </html>
