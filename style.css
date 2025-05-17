@@ -7,47 +7,6 @@ body {
   color: #333;
 }
 
-/* Reguläres Footer Styling - vor Dark Mode */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: #e6ecf4;
-  color: #005bbb;
-  position: relative;
-  font-size: 0.9rem;
-}
-
-.footer-link {
-  background: none;
-  border: none;
-  color: #005bbb;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-  padding: 0;
-}
-
-/* Dark Mode Footer Styles */
-body.dark-mode footer {
-  background-color: #1a1a1a !important;
-  color: #82aaff;
-  position: relative;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-body.dark-mode footer .footer-link {
-  color: #82aaff;
-}
-
-body.dark-mode footer .footer-link:hover {
-  text-decoration: underline;
-  color: #a0bfff;
-}
-
-/* Header */
 header {
   background: linear-gradient(90deg, #005bbb, #002d72);
   color: white;
@@ -261,6 +220,25 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #e6ecf4;
+  color: #005bbb;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #005bbb;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  padding: 0;
 }
 
 .modal {
