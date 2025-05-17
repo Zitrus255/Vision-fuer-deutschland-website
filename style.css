@@ -156,7 +156,7 @@ body.dark-mode a {
 }
 
 body.dark-mode .member-card {
-  background-color: #2a2a2a;
+  background-color: #4f4b4b;
   border-left-color: #82aaff;
 }
 
@@ -277,10 +277,6 @@ footer {
   cursor: pointer;
   color: #888;
   font-weight: bold;
-}
-
-.close-btn:hover {
-  color: #000;
 }
 
 .close-btn:hover {
