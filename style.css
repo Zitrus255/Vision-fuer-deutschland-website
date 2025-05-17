@@ -145,6 +145,24 @@ body.dark-mode nav button.active {
   background-color: #005bbb;
   color: white;
 }
+/* Dark Mode Footer Styles */
+body.dark-mode footer {
+  background-color: #1a1a1a !important;
+  color: #82aaff;
+  position: relative;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+body.dark-mode footer .footer-link {
+  color: #82aaff;
+}
+
+body.dark-mode footer .footer-link:hover {
+  text-decoration: underline;
+}
+
 
 body.dark-mode .tab-content {
   background-color: #222222;
