@@ -33,4 +33,27 @@ body.dark-mode footer .footer-link:hover {
   text-decoration: underline;
   color: #a0bfff; /* Optional: helleres Hover-Farbe */
 }
+/* Dark Mode für Impressum Modal */
+body.dark-mode #ImpressumModal .modal-content {
+  background-color: #222222;
+  color: #82aaff;
+  box-shadow: 0 0 15px rgba(130, 170, 255, 0.5);
+}
+
+body.dark-mode #ImpressumModal .modal-content a {
+  color: #82aaff;
+}
+
+body.dark-mode #ImpressumModal .modal-content a:hover {
+  color: #a3bfff;
+}
+
+body.dark-mode #ImpressumModal .close-btn {
+  color: #82aaff;
+}
+
+body.dark-mode #ImpressumModal .close-btn:hover {
+  color: #a3bfff;
+}
+
 
