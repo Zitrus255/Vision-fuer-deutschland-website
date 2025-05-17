@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header>
-  <div class="header-container" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem;">
-    <img src="logo.png" alt="VFD Logo" class="logo" style="height:60px;" />
-    <div>
-      <h1>VISION FÜR DEUTSCHLAND</h1>
-      <p>Weil wir die Zukunft im Blick haben</p>
+  <header>
+    <div class="header-container" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem;">
+      <img src="logo.png" alt="VFD Logo" class="logo" style="height:60px;" />
+      <div>
+        <h1>VISION FÜR DEUTSCHLAND</h1>
+        <p>Weil wir die Zukunft im Blick haben</p>
+      </div>
     </div>
-  </div>
-  <div class="darkmode-toggle" style="text-align:center; margin-bottom: 1rem;">
-    <label class="switch">
-      <input type="checkbox" id="darkModeSwitch" />
-      <span class="slider round"></span>
-    </label>
-    <span>Dark Mode</span>
-  </div>
- </header>
+    <div class="darkmode-toggle" style="text-align:center; margin-bottom: 1rem;">
+      <label class="switch">
+        <input type="checkbox" id="darkModeSwitch" />
+        <span class="slider round"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
+  </header>
 
   <nav>
     <button class="tab-button active" data-tab="start">Startseite</button>
@@ -81,93 +81,82 @@
           <h3>Paul F. Schulz</h3>
           <p>Gründer & Vorsitzender</p>
         </div>
-       <div class="member-card" style="border-left: 4px solid #005bbb; background:#f9f9f9; padding:1rem; border-radius:6px; box-shadow: 0 1px 5px rgba(0,0,0,0.1);">
-  <h3>Johann Brucka</h3>
-  <p>Werbetreibender</p>
-</div>
+        <div class="member-card" style="border-left: 4px solid #005bbb; background:#f9f9f9; padding:1rem; border-radius:6px; box-shadow: 0 1px 5px rgba(0,0,0,0.1);">
+          <h3>Johann Brucka</h3>
+          <p>Werbetreibender</p>
+        </div>
       </div>
     </section>
-
- 
   </main>
 
- <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll("nav button.tab-button");
-  const sections = document.querySelectorAll("main section.tab-content");
+  <footer>
+    <p>© 2025 Vision für Deutschland (VFD)</p>
+    <button id="impressumBtn" class="footer-link">Impressum</button>
+  </footer>
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const target = button.getAttribute("data-tab");
-
-      // Alle Tabs verstecken & Buttons deaktivieren
-      sections.forEach(section => {
-        section.hidden = true;
-        section.classList.remove("active");
-      });
-      buttons.forEach(btn => btn.classList.remove("active"));
-
-      // Gewählten Tab zeigen & Button aktivieren
-      document.getElementById(target).hidden = false;
-      document.getElementById(target).classList.add("active");
-      button.classList.add("active");
-    });
-  });
-
-  // Dark Mode Switch
-  const darkModeSwitch = document.getElementById('darkModeSwitch');
-  darkModeSwitch.addEventListener('change', () => {
-    if (darkModeSwitch.checked) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  });
-
-  // Impressum Modal
-  const impressumBtn = document.getElementById('impressumBtn');
-  const impressumModal = document.getElementById('impressumModal');
-  const closeImpressum = document.getElementById('closeImpressum');
-
-  impressumBtn.addEventListener('click', () => {
-    impressumModal.style.display = 'block';
-  });
-
-  closeImpressum.addEventListener('click', () => {
-    impressumModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === impressumModal) {
-      impressumModal.style.display = 'none';
-    }
-  });
-});
-</script>
-
-<footer>
-  <p>© 2025 Vision für Deutschland (VFD)</p>
-  <button id="impressumBtn" class="footer-link">Impressum</button>
-</footer>
-
-<!-- Impressum Modal -->
-<div id="impressumModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeImpressum">&times;</span>
-    <h2>Impressum</h2>
-    <p><strong>Verantwortlich für den Inhalt:</strong><br>
-    Paul Schulz<br>
-    Honigacker 23<br>
-    91583 Diebach<br>
-    <a href="mailto:visionfuerdeutschland.an@gmail.com">visionfuerdeutschland.an@gmail.com</a><br>
-    0171 179 6643</p>
-    <p><strong>Partei:</strong> Vision für Deutschland (VFD)<br>
-    <strong>Website:</strong> <a href="https://zitrus255.github.io/ision-fuer-deutschland-website/" target="_blank" rel="noopener">https://zitrus255.github.io/ision-fuer-deutschland-website/</a></p>
-    <p><strong>Haftungsausschluss:</strong><br>
-    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+  <!-- Impressum Modal -->
+  <div id="impressumModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-btn" id="closeImpressum">&times;</span>
+      <h2>Impressum</h2>
+      <p><strong>Verantwortlich für den Inhalt:</strong><br>
+      Paul Schulz<br>
+      Honigacker 23<br>
+      91583 Diebach<br>
+      <a href="mailto:visionfuerdeutschland.an@gmail.com">visionfuerdeutschland.an@gmail.com</a><br>
+      0171 179 6643</p>
+      <p><strong>Partei:</strong> Vision für Deutschland (VFD)<br>
+      <strong>Website:</strong> <a href="https://zitrus255.github.io/vision-fuer-deutschland-website/" target="_blank" rel="noopener">https://zitrus255.github.io/vision-fuer-deutschland-website/</a></p>
+      <p><strong>Haftungsausschluss:</strong><br>
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+    </div>
   </div>
-</div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll("nav button.tab-button");
+      const sections = document.querySelectorAll("main section.tab-content");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-tab");
+
+          sections.forEach(section => {
+            section.hidden = true;
+            section.classList.remove("active");
+          });
+          buttons.forEach(btn => btn.classList.remove("active"));
+
+          document.getElementById(target).hidden = false;
+          document.getElementById(target).classList.add("active");
+          button.classList.add("active");
+        });
+      });
+
+      const darkModeSwitch = document.getElementById('darkModeSwitch');
+      darkModeSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode', darkModeSwitch.checked);
+      });
+
+      const impressumBtn = document.getElementById('impressumBtn');
+      const impressumModal = document.getElementById('impressumModal');
+      const closeImpressum = document.getElementById('closeImpressum');
+
+      impressumBtn.addEventListener('click', () => {
+        impressumModal.style.display = 'block';
+      });
+
+      closeImpressum.addEventListener('click', () => {
+        impressumModal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === impressumModal) {
+          impressumModal.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
