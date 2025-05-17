@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vision für Deutschland</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header>
+  <div class="header-container" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem;">
+    <img src="logo.png" alt="VFD Logo" class="logo" style="height:60px;" />
+    <div>
+      <h1>VISION FÜR DEUTSCHLAND</h1>
+      <p>Weil wir die Zukunft im Blick haben</p>
+    </div>
+  </div>
+  <div class="darkmode-toggle" style="text-align:center; margin-bottom: 1rem;">
+    <label class="switch">
+      <input type="checkbox" id="darkModeSwitch" />
+      <span class="slider round"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+ </header>
+
+  <nav>
+    <button class="tab-button active" data-tab="start">Startseite</button>
+    <button class="tab-button" data-tab="about">Über uns</button>
+    <button class="tab-button" data-tab="contact">Kontakt</button>
+    <button class="tab-button" data-tab="news">News</button>
+    <button class="tab-button" data-tab="members">Mitglieder</button>
+  </nav>
+
+  <main>
+    <section id="start" class="tab-content active" role="tabpanel" aria-labelledby="start-tab">
+      <h2>Willkommen bei der VFD</h2>
+      <div class="vfd-description" style="max-width:700px; margin:auto; text-align:justify;">
+        <p><strong>Vision für Deutschland (VFD)</strong> ist eine zukunftsorientierte, unabhängige Partei, die sich für ein starkes, gerechtes und modernes Deutschland einsetzt. Ihr zentrales Anliegen ist es, das Vertrauen in den Staat wiederherzustellen und die Bedürfnisse der eigenen Bevölkerung konsequent in den Mittelpunkt der Politik zu rücken – ohne dabei soziale Verantwortung, internationale Zusammenarbeit und Menschlichkeit aus den Augen zu verlieren.</p>
+        <p>Die VFD steht für soziale Gerechtigkeit, wirtschaftliche Stabilität, ein modernes Bildungssystem, eine leistungsfähige Gesundheitsversorgung sowie eine klare, faire Migrations- und Integrationspolitik. Dabei verfolgt sie einen lösungsorientierten Kurs, der pragmatisch und menschennah zugleich ist.</p>
+        <p>Im Fokus der Partei steht die Förderung einer Gesellschaft, in der jeder Einzelne zählt – unabhängig von Herkunft, sozialem Status oder Alter. Mit innovativen Ansätzen in Technologie, Umwelt und Sicherheit strebt die VFD einen Wandel an, der Deutschland wieder zu einem Vorbild für soziale Stärke, wirtschaftliche Innovation und politischen Mut macht.</p>
+      </div>
+      <p style="text-align:center; margin-top:1rem;">
+        📄 <a href="GRUNDSATZPROGRAMM.pdf" target="_blank" rel="noopener noreferrer">Grundsatzprogramm herunterladen</a>
+      </p>
+    </section>
+
+    <section id="about" class="tab-content" role="tabpanel" aria-labelledby="about-tab" hidden>
+      <h2>Über uns</h2>
+      <p>Die VFD wurde mit der Vision gegründet, das Vertrauen in die Politik wiederherzustellen und eine neue Generation der Verantwortung zu schaffen.</p>
+      <p><strong>Gründer:</strong> Paul F. Schulz</p>
+    </section>
+
+    <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="contact-tab" hidden>
+      <h2>Kontakt & Bewerbung</h2>
+      <p>Wenn du dich bei uns bewerben möchtest, sende bitte eine E-Mail an:</p>
+      <p><a href="mailto:visionfuerdeutschland.an@gmail.com">visionfuerdeutschland.an@gmail.com</a></p>
+      <p>Bitte gib in der E-Mail folgende Informationen an:</p>
+      <ul>
+        <li>Mindestalter: 16 Jahre</li>
+        <li>Voller Name</li>
+        <li>Wohnsitz (optional)</li>
+        <li>Geburtstag</li>
+        <li>Alter</li>
+        <li>Warum möchtest du bei uns mitmachen?</li>
+      </ul>
+    </section>
+
+    <section id="news" class="tab-content" role="tabpanel" aria-labelledby="news-tab" hidden>
+      <h2>Neuigkeiten</h2>
+      <article>
+        <h3>🛡️ Neues Konzept vorgestellt: Umgang mit schwerwiegenden Straftaten</h3>
+        <p>Die VFD setzt auf konsequente Strafverfolgung, harte Strafen, Resozialisierung, Opferschutz und Prävention. Mehr dazu in unserem Grundsatzpapier.</p>
+      </article>
+    </section>
+
+    <section id="members" class="tab-content" role="tabpanel" aria-labelledby="members-tab" hidden>
+      <h2>Mitglieder</h2>
+      <div class="member-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; max-width:900px; margin:auto;">
+        <div class="member-card" style="border-left: 4px solid #005bbb; background:#f9f9f9; padding:1rem; border-radius:6px; box-shadow: 0 1px 5px rgba(0,0,0,0.1);">
+          <h3>Paul F. Schulz</h3>
+          <p>Gründer & Vorsitzender</p>
+        </div>
+        <!-- Weitere Mitglieder können hier ergänzt werden -->
+      </div>
+    </section>
+
+ 
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll("nav button.tab-button");
+      const sections = document.querySelectorAll("main section.tab-content");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-tab");
+
+          // Alle Tabs verstecken & Buttons deaktivieren
+          sections.forEach(section => {
+            section.hidden = true;
+            section.classList.remove("active");
+          });
+          buttons.forEach(btn => btn.classList.remove("active"));
+
+          // Gewählten Tab zeigen & Button aktivieren
+          document.getElementById(target).hidden = false;
+          document.getElementById(target).classList.add("active");
+          button.classList.add("active");
+        });
+      });
+
+      // Dark Mode Switch
+      const darkModeSwitch = document.getElementById('darkModeSwitch');
+      darkModeSwitch.addEventListener('change', () => {
+        if (darkModeSwitch.checked) {
+          document.body.classList.add('dark-mode');
+        } else {
+          document.body.classList.remove('dark-mode');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
