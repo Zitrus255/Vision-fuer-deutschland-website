@@ -49,3 +49,4 @@ window.addEventListener('click', (event) => {
     impressumModal.style.display = 'none';
   }
 });
+
