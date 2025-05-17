@@ -156,8 +156,8 @@ body.dark-mode a {
 }
 
 body.dark-mode .member-card {
-  background-color: #444242;
-  border-left-color: #82aaff;
+  background-color: #1a1a1a !important;
+  border-left-color: #82aaff !important;
 }
 
 /* Dark Mode Toggle Switch in Einstellungen */
