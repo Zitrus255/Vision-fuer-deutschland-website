@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -11,16 +12,9 @@
   <div class="header-container" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem;">
     <img src="logo.png" alt="VFD Logo" class="logo" style="height:60px;" />
     <div>
-      <h1 id="header-title">VISION FÜR DEUTSCHLAND</h1>
-      <p id="header-subtitle">Weil wir die Zukunft im Blick haben</p>
+      <h1>VISION FÜR DEUTSCHLAND</h1>
+      <p>Weil wir die Zukunft im Blick haben</p>
     </div>
-  </div>
-  <div style="text-align:center; margin-bottom: 1rem;">
-    <label for="languageSelect">Sprache:</label>
-    <select id="languageSelect" style="margin-left:0.5rem; padding:0.25rem;">
-      <option value="de" selected>Deutsch</option>
-      <option value="en">English</option>
-    </select>
   </div>
   <div class="darkmode-toggle" style="text-align:center; margin-bottom: 1rem;">
     <label class="switch">
@@ -29,8 +23,7 @@
     </label>
     <span>Dark Mode</span>
   </div>
-</header>
-
+ </header>
 
   <nav>
     <button class="tab-button active" data-tab="start">Startseite</button>
@@ -53,19 +46,22 @@
       </p>
     </section>
 
-    <section id="about" class="tab-content" role="tabpanel" aria-labelledby="about-tab" hidden>
-      <h2>Über uns</h2>
-      <p>Die VFD – Vision für Deutschland wurde gegründet, um das Vertrauen in die Politik wiederherzustellen und eine neue Generation von Verantwortungsbewusstsein und Ehrlichkeit zu fördern. Unsere Vision ist es, Politik wieder zum Dienst am Gemeinwohl zu machen und den Menschen eine echte Stimme zu geben.
+```
+<section id="about" class="tab-content" role="tabpanel" aria-labelledby="about-tab" hidden>
+  <h2>Über uns</h2>
+  <p>Die VFD – Vision für Deutschland wurde gegründet, um das Vertrauen in die Politik wiederherzustellen und eine neue Generation von Verantwortungsbewusstsein und Ehrlichkeit zu fördern. Unsere Vision ist es, Politik wieder zum Dienst am Gemeinwohl zu machen und den Menschen eine echte Stimme zu geben.
+```
 
 Paul F. Schulz, der Gründer der VFD, hat im Laufe seines Lebens immer wieder das Leiden vieler Menschen hautnah miterlebt – ob durch soziale Ungerechtigkeiten, politische Fehlentscheidungen oder mangelnde Solidarität. Dieses Mitgefühl und der Wunsch, diese Zustände zu verändern, waren der Antrieb, eine Partei zu gründen, die sich wirklich für die Menschen einsetzt.
 
 Die VFD steht für eine Zukunft, in der Respekt, Zusammenhalt und nachhaltige Lösungen im Mittelpunkt stehen. Wir wollen eine Politik gestalten, die nicht nur verspricht, sondern auch handelt – für ein Deutschland, in dem jeder Mensch Chancen und Sicherheit hat.
 
-Gemeinsam arbeiten wir an einer besseren Zukunft – und laden dich ein, Teil dieser Vision zu werden.</p>
-      <p><strong>Gründer:</strong> Paul F. Schulz</p>
-    </section>
+Gemeinsam arbeiten wir an einer besseren Zukunft – und laden dich ein, Teil dieser Vision zu werden.</p> <p><strong>Gründer:</strong> Paul F. Schulz</p> </section>
 
-    <section id="contact" class="tab-content" role="tabpanel" aria-labelledby="contact-tab" hidden>
+```
+<section id="contact" class="tab-content" role="tabpanel" aria-labelledby="contact-tab" hidden>
+```
+
   <h2>Kontakt & Bewerbung</h2>
   <p>Wenn du dich bei uns bewerben möchtest oder Fragen hast, sende bitte eine E-Mail an:</p>
   <p><a href="mailto:visionfuerdeutschland.an@gmail.com">visionfuerdeutschland.an@gmail.com</a></p>
@@ -87,17 +83,19 @@ Gemeinsam arbeiten wir an einer besseren Zukunft – und laden dich ein, Teil di
   </ul>
 </section>
 
-    <section id="news" class="tab-content" role="tabpanel" aria-labelledby="news-tab" hidden>
-      <h2>Neuigkeiten</h2>
-      <article>
-        <h3>Neue Themen im Wahlprogramm ergänzt</h3>
-        <p>Wir haben unser Grundsatzprogramm erweitert und zwei wichtige Kapitel hinzugefügt:
+```
+<section id="news" class="tab-content" role="tabpanel" aria-labelledby="news-tab" hidden>
+  <h2>Neuigkeiten</h2>
+  <article>
+    <h3>Neue Themen im Wahlprogramm ergänzt</h3>
+    <p>Wir haben unser Grundsatzprogramm erweitert und zwei wichtige Kapitel hinzugefügt:
 
-    Kapitel 5.6 – Umgang mit Abtreibung: Ein klarer Standpunkt zur Regelung von Schwangerschaftsabbrüchen, der differenziert zwischen Vergewaltigung und anderen Fällen.
+Kapitel 5.6 – Umgang mit Abtreibung: Ein klarer Standpunkt zur Regelung von Schwangerschaftsabbrüchen, der differenziert zwischen Vergewaltigung und anderen Fällen.
 
-    Kapitel 9.7 – Weltraumstrategie Deutschlands: Zukunftsorientierte Pläne für Deutschlands Position und Entwicklung im Weltraum.</p>
-      </article>
-    </section>
+Kapitel 9.7 – Weltraumstrategie Deutschlands: Zukunftsorientierte Pläne für Deutschlands Position und Entwicklung im Weltraum.</p>
+  </article>
+</section>
+```
 
  <section id="members" class="tab-content" role="tabpanel" aria-labelledby="members-tab" hidden>
   <h2>Mitglieder</h2>
@@ -113,8 +111,6 @@ Gemeinsam arbeiten wir an einer besseren Zukunft – und laden dich ein, Teil di
   </div>
 </section>
 
-
- 
   </main>
 
  <script>
@@ -177,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </footer>
 
 <!-- Impressum Modal -->
+
 <div id="impressumModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" id="closeImpressum">&times;</span>
