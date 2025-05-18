@@ -11,9 +11,16 @@
   <div class="header-container" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem;">
     <img src="logo.png" alt="VFD Logo" class="logo" style="height:60px;" />
     <div>
-      <h1>VISION FÜR DEUTSCHLAND</h1>
-      <p>Weil wir die Zukunft im Blick haben</p>
+      <h1 id="header-title">VISION FÜR DEUTSCHLAND</h1>
+      <p id="header-subtitle">Weil wir die Zukunft im Blick haben</p>
     </div>
+  </div>
+  <div style="text-align:center; margin-bottom: 1rem;">
+    <label for="languageSelect">Sprache:</label>
+    <select id="languageSelect" style="margin-left:0.5rem; padding:0.25rem;">
+      <option value="de" selected>Deutsch</option>
+      <option value="en">English</option>
+    </select>
   </div>
   <div class="darkmode-toggle" style="text-align:center; margin-bottom: 1rem;">
     <label class="switch">
@@ -22,7 +29,8 @@
     </label>
     <span>Dark Mode</span>
   </div>
- </header>
+</header>
+
 
   <nav>
     <button class="tab-button active" data-tab="start">Startseite</button>
