@@ -12,7 +12,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   background-color: #e6ecf4;
-  color: #005bbb;
+  color: #c13518;
   position: relative;
   font-size: 0.9rem;
 }
@@ -20,7 +20,7 @@ footer {
 .footer-link {
   background: none;
   border: none;
-  color: #005bbb;
+  color: #c13518;
   cursor: pointer;
   text-decoration: underline;
   font-size: 0.9rem;
@@ -31,7 +31,7 @@ footer {
 /* Dark Mode Footer Styles */
 body.dark-mode footer {
   background-color: #1a1a1a !important;
-  color: #82aaff;
+  color: #c13518;
   position: relative;
   font-size: 0.9rem;
   text-align: center;
@@ -39,17 +39,17 @@ body.dark-mode footer {
 }
 
 body.dark-mode footer .footer-link {
-  color: #82aaff;
+  color: #c13518;
 }
 
 body.dark-mode footer .footer-link:hover {
   text-decoration: underline;
-  color: #a0bfff;
+  color: #e1563b;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #005bbb, #002d72);
+  background: linear-gradient(90deg, #c13518, #801f0f);
   color: white;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -90,7 +90,7 @@ nav {
 }
 
 nav button {
-  background-color: #005bbb;
+  background-color: #c13518;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -101,11 +101,11 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #003f80;
+  background-color: #801f0f;
 }
 
 nav button.active {
-  background-color: #003f80;
+  background-color: #801f0f;
 }
 
 /* Tabs Inhalt */
@@ -136,7 +136,7 @@ main {
 
 /* Links */
 a {
-  color: #005bbb;
+  color: #c13518;
   text-decoration: none;
   font-weight: bold;
 }
@@ -156,7 +156,7 @@ a:hover {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 6px;
-  border-left: 4px solid #005bbb;
+  border-left: 4px solid #c13518;
   box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
@@ -183,7 +183,7 @@ body.dark-mode nav button {
 
 body.dark-mode nav button:hover,
 body.dark-mode nav button.active {
-  background-color: #005bbb;
+  background-color: #c13518;
   color: white;
 }
 
@@ -193,12 +193,12 @@ body.dark-mode .tab-content {
 }
 
 body.dark-mode a {
-  color: #82aaff;
+  color: #c13518;
 }
 
 body.dark-mode .member-card {
   background-color: #1a1a1a !important;
-  border-left-color: #82aaff !important;
+  border-left-color: #c13518 !important;
 }
 
 /* Dark Mode Toggle Switch in Einstellungen */
@@ -240,7 +240,7 @@ body.dark-mode .member-card {
 }
 
 input:checked + .slider {
-  background-color: #005bbb;
+  background-color: #c13518;
 }
 
 input:checked + .slider:before {
@@ -284,7 +284,7 @@ input:checked + .slider:before {
 }
 
 .modal-content a {
-  color: #005bbb;
+  color: #c13518;
   text-decoration: none;
 }
 
